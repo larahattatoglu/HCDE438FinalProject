@@ -1,0 +1,78 @@
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family:'work sans' sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 0 1rem; 
+}
+
+.h4 {
+  font-weight: normal;
+}
+
+.footer {
+  height: 10rem;
+  width: 100%;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  
+}
+
+.resizedTextbox {width: 400px; height: 20px}
+
+.text-input {
+  height: 2rem;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-left: 1rem;
+  width: 10rem;
+}
+.span {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.add {
+  background-color: rgb(105,121,248);
+  color: white;
+  height: 2rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'work sans' sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px #cccaca;
+}
