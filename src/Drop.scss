@@ -17,14 +17,14 @@ html {
     flex-wrap: wrap;
   
     .dd-header {
-      @include styling();
+    
       display: flex;
       justify-content: space-between;
       cursor: pointer;
       width: 100%;
-      padding: 0 20px;
+      padding: 0 0px;
   
-      &__title--bold {
+      & __title--bold {
         font-weight: bold;
       }
     }

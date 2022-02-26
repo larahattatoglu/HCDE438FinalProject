@@ -1,9 +1,9 @@
-/* import '/.Drop.scss';
+import './Drop.scss';
 import React from 'react';
 import { useState } from 'react';
 
 
-function Dropdown({title, items, multiSelect= false}) {
+function Dropdown({selectTitle, items, multiSelect= false}) {
     const [open,setOpen] = useState(false);
     const [selection, setSelection] = useState([]);
     const toggle = () => setOpen(!open);
@@ -41,7 +41,7 @@ function Dropdown({title, items, multiSelect= false}) {
                 onClick = {()=> toggle(!open)} >
 
                     <div className = 'dd_header_title' >
-                        <p className = 'dd_header_title--bold'>(title)</p>
+                        <p className = 'dd_header_title--bold' style = {{fontWeight: 'bold'}}>{selectTitle}</p>
                         </div>
                         <div className ="dd-header__action">
                             <p>{open ? 'Close' : 'Open'}</p>
