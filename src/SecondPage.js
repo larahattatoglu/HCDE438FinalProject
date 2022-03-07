@@ -1,17 +1,29 @@
 import './SecondPage.css';
-import { useState } from 'react';
 import React from 'react';
+import './App.css';
+import TextInput from './TextInput.js';
+import { useState } from 'react';
 
-export default function SecondPage() {
-    const [secondtext, setSecondText] = useState("");
+
+
+
+export default function SecondPage({afterFirstPage}) {
+    const [messages,setMessages] = useState([]);
+    function send() {
+        afterFirstPage(3);
+     }
+     function sendMessage(msg) {
+       console.log(msg);
+       setMessages([msg, ...messages])
+
+
+     }
+  
+ 
     return (
        
         <div className="App">
-        <div className = 'content'>
-            <header className="header"> 
-            </header>
-           
-            <div align = "left" className= "resizedTextbox" >
+        <div className = 'content'>     
             <h1>How are you going to eat healthier?</h1>
             <h3 style = {{fontWeight:'bold'}}>Add an action that can help you achieve this goal</h3>
 
@@ -25,26 +37,26 @@ export default function SecondPage() {
             <div> • Measurable </div>
             <div> • Specific on duration and quantity  </div>
             <div style = {{marginBottom:'1.5rem'}}> • Feasible </div>
-    
-            <form>
-            <span>
-            <label htmlFor="label-name" style = {{fontWeight:'bold'}}> Add Action </label>
-            <input id="label-name" name = "label-name" 
-              className = "text-input"
-              value = {secondtext} 
-              onChange={(e) => setSecondText(e.target.value)}
-              />
-              
-            </span>
+            
+            <div class ='form'>
+
+            <form class = 'email-form'>
+           
+            
             </form>
-            <button className = "add" > 
+            <div className='messages'>
+              {messages.map((msg)=>{
+                return <div className= 'message'> {msg} </div>
+              })}
+            </div>
+            </div>
+            <TextInput sendMessage= {sendMessage}/> 
+            <button className = "add" onClick={send}> 
                 Next  
               </button>
-        <footer className = "footer" > 
-        </footer>   
+              </div>
     </div>
-    </div>
-    </div>
+   
 
 
     );

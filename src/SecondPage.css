@@ -1,34 +1,25 @@
-.header {
-    height: 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    font-family:'work sans' sans-serif;
-    font-weight: bold;
-    font-size: x-large;
-    padding: 0 1rem; 
-  } 
+
   
-  
-  .resizedTextbox {width: 600px; height: 20px}
+.resizedTextbox {width: 600px; height: 20px}
   
  
   .h4 {
       font-weight: normal;
   }
-  .text-input {
+  .text-input-2 {
     height: 2rem;
     border: 1px solid rgb(216, 216, 216);
-    border-radius: 0.5rem;
-    background-color: white;
-    margin-left: 1rem;
-    width: 15rem;
+    border-radius:0.5rem 0 0 0.5rem;
+    background-color: white; 
+    width: 26rem;
+ 
   }
-  
-  .form {
+ 
+.form {
     display: flex;
     flex-direction: column;
   }
+ 
   .add {
     background-color: rgb(105,121,248);
     color: white;
@@ -50,16 +41,42 @@
     background-color: white;
     color: rgb(105,121,248);
     border-color: white;
+
     
   }
-  .footer {
-    height: 10rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding: 0 1rem;
-    position: relative;
-    margin-top: 50%;
+  .add-action {
+    height: 2rem;
+    width: 6rem;
+    flex-direction: row;
+    border-radius: 0 0.5rem  0.5rem 0;
+    border: 2px solid rgb(105,121,248);
+    background-color: white;
+    font-family: 'work sans' sans-serif;
+    
   }
- 
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+     
+}
+
+.messages {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  overflow: auto;
+  flex: 1;
+}
+.message {
+  color: rgb(8, 8, 8);
+  background: rgb(255, 254, 254);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  max-width: 20rem;
+  min-height: auto;
+  overflow-wrap: break-word;
+  position: relative;
+  font-family: 'work sans' 'sans-serif';
+}
