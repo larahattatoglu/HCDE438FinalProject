@@ -12,6 +12,8 @@
     border-radius:0.5rem 0 0 0.5rem;
     background-color: white; 
     width: 26rem;
+    font-family: 'work sans', sans-serif;
+    color: rgb(105,121,248);
  
   }
  
@@ -47,7 +49,6 @@
   .add-action {
     height: 2rem;
     width: 6rem;
-    flex-direction: row;
     border-radius: 0 0.5rem  0.5rem 0;
     border: 2px solid rgb(105,121,248);
     background-color: white;
@@ -80,3 +81,44 @@
   position: relative;
   font-family: 'work sans' 'sans-serif';
 }
+
+.badwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:space-between;
+  overflow: auto;
+  flex: 1;
+  width: auto;
+  height: auto;
+  background-color: rgb(245, 208, 208);
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  color: rgb(155, 4, 4);
+  border-radius: 1rem;
+  font-weight: bold;
+
+}
+.goodwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:space-between;
+  overflow: auto;
+  flex: 1;
+  width: auto;
+  height: auto;
+  background-color: rgb(214, 238, 203);
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  color: rgb(20, 112, 8);
+  border-radius: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+}
+
+

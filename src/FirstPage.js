@@ -1,3 +1,4 @@
+
 import './FirstPage.css';
 import { useState } from 'react';
 import React from 'react';
@@ -21,25 +22,21 @@ const items = [
     },
   ];
   
-  export default function FirstPage({afterFirstPage}) {
-   const [goal,setGoal] = useState("");
-    
+  export default function FirstPage(props) {
+  
     function send() {
-       afterFirstPage(2);
+       props.afterFirstPage(2);
     }
 
-    function sendGoal(msg) {
-      console.log(msg);
-      setGoal(msg);
+   
     
-    }
 
     return (
     
       <div className="App">
         <div className ='content'>
-        <h1> What are your goals? </h1>
-       <h4 className='h4'>
+        <h2 style = {{fontWeight: 'normal'}}> What are your goals? </h2>
+        <h4 className='h4'>
         <div> They can be as broad or as specific as you want.</div> 
         <div>They can span over a course of a month or a day. </div>
         <div>Just anything you would like to achieve write it down!</div>
@@ -47,15 +44,14 @@ const items = [
         <form>
         <span>
         <label htmlFor="label-name" style = {{fontWeight: 'bold'}}> What is your goal? </label>
-        <GoalInput sendGoal={sendGoal}/>       
+        <GoalInput setGoal = {props.setGoal} goal = {props.goal} />       
         </span>
-        <div>
-          {goal}
-        </div>
+       <div>
+       
+       </div>
         </form>
         
-        <Dropdown selectTitle = "Select Timeline For Goal" items = {items} /> 
-       
+        <Dropdown selectTitle = "Select Timeline For Goal" items = {items}/> 
         <button className = "add" onClick={send}> 
                 Add Goal  
               </button>
@@ -67,4 +63,4 @@ const items = [
     );
   }
   
-    
+  

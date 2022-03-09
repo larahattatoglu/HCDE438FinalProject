@@ -1,33 +1,34 @@
 import './App.css';
 import { useState } from 'react';
-import './FirstPage.js';
 import './FirstPage.css';
 
-
+//onChange={(e) => setText(e.target.value)} />
 function GoalInput(props) {
-    const [text, setText] = useState("");
-    const {sendGoal} = props;
-    function click() {
-        sendGoal(text);
-        setText('');
-    }
+  
+    //initialize as empty string
+
+ 
+   
  return (
+   
+
+
+     
     <div>
         <input 
-        className = "text-input-2"
-        value = {text} 
-        onChange={(e) => setText(e.target.value)} />
+        className = "text-input-1"
+        inputValue = {props.goal} 
+        onChange={(e) => props.setGoal(e.target.value)}
+       
+        />
     
-    <button  className = 'add-action'
-        onClick = {click}
-
-    > 
-      Add
-
-       </button>
+   
    </div>
 
  );
+
+
+
 }
 
 export default GoalInput;

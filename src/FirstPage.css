@@ -1,17 +1,19 @@
 
-  .resizedTextbox {width: 600px; height: 20px}
+  .resizedTextbox {width:1000px; height: 20px}
   
  
   .h4 {
       font-weight: normal;
+      font-size: small;
+      color: rgb(53, 53, 53);
   }
   .text-input-1 {
     height: 2rem;
     border: 1px solid rgb(216, 216, 216);
     border-radius: 0.5rem;
     background-color: white;
-    margin-left: 1rem;
-    width: 15rem;
+    margin-top: 0.5rem;
+    width: 20rem;
   }
   
   .form {
@@ -42,4 +44,5 @@
     
   }
 
+  
  

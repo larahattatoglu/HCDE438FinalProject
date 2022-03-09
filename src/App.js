@@ -12,22 +12,22 @@ import ThirdPage from './ThirdPage.js';
 
 function App() {
   const [page, setPage] = useState(1)
+  const [goal, setGoal] = useState('');
+  const [messages,setMessages] = useState([]);
+  
+
+  
   function pageGenerator () {
     if (page === 1) {
-    return <FirstPage afterFirstPage = {setPage}/>
+    return <FirstPage afterFirstPage = {setPage} setGoal = {setGoal} goal = {goal} />
     }
     else if (page === 2) {
-      return <SecondPage afterFirstPage = {setPage}/>
+      return <SecondPage afterFirstPage = {setPage} setMessages = {setMessages} messages = {messages}/>
     }
     else if (page === 3) {
-      return <ThirdPage afterFirstPage = {setPage} />
+      return <ThirdPage afterFirstPage = {setPage} goal = {goal} setMessages = {setMessages} messages = {messages}/>
     }
-    /*
-     else if (page == 4) {
-      return <FourthPage afterFirstPage = {setPage} />
-
-    }
-    */
+   
   }
     return (
      
