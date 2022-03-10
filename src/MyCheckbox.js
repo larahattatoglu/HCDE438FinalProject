@@ -7,9 +7,11 @@ export default function MyCheckbox(props) {
     return (
     <FormGroup>
         {props.messages.map((msg)=>{
-                return <FormControlLabel control={<Checkbox defaultChecked />} label={msg} />
+                return <FormControlLabel control={<Checkbox defaultChecked />} label={msg} 
+                 />
+                 
               })}
-    
+
     </FormGroup>
     );
 }

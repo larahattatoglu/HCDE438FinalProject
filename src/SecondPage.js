@@ -2,7 +2,16 @@ import './SecondPage.css';
 import React from 'react';
 import './App.css';
 import TextInput from './TextInput.js';
-import { useState } from 'react';
+
+
+import Button from '@mui/material/Button';
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
+import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+
+
+
 
 
 
@@ -14,6 +23,11 @@ export default function SecondPage(props) {
     function send() {
         props.afterFirstPage(3);
      }
+     function back() {
+       props.afterFirstPage(1)
+
+     }
+     
      function sendMessage(msg) {
        console.log(msg);
        props.setMessages([msg, ...props.messages]);
@@ -25,12 +39,17 @@ export default function SecondPage(props) {
     return (
        
         <div className="App">
-        <div className = 'content'>     
-            <h2 style = {{fontWeight: 'normal'}}>(2/3) How are you going to Eat Healthier? </h2> 
+        <div className = 'content'>  
+        
+          <button className = "back-button" onClick={back}> 
+                 
+          </button>
+         
+            <h1 style = {{fontWeight: 'normal'}}>How are you going to Eat Healthier? </h1> 
             
             <h3 style = {{fontWeight:'bold', marginTop: '3rem'}}>Add an action that can help you achieve this goal</h3>
 
-            <div style = {{marginBottom:'1.5rem'}}> Make sure your action is <span style ={{fontWeight: 'bold'}}>specific, measurable, and feasible </span></div>
+            <div style = {{marginTop: '0', marginBottom:'1.5rem'}}> Make sure your action is <span style ={{fontWeight: 'bold'}}>specific, measurable, and feasible </span></div>
             
             <div className = 'badwrap' > 
               Bad example: Eat more vegetables
@@ -53,14 +72,14 @@ export default function SecondPage(props) {
             </form>
             <div className='messages'>
               {props.messages.map((msg)=>{
-                return <div className= 'message'> {msg} </div>
+                return <div className= 'message'> {msg} <IconButton aria-label="delete">
+                <DeleteIcon />
+              </IconButton> </div>
               })}
             </div>
             </div>
             <TextInput sendMessage= {sendMessage}/> 
-            <button className = "add" onClick={send}> 
-                Next  
-              </button>
+            <Button variant="contained" onClick={send} style = {{marginTop: '2rem'}}>Next</Button>
               </div>
     </div>
    

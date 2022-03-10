@@ -1,6 +1,5 @@
 
 import React from 'react';
-import propTypes from 'react-aria-menubutton/dist/propTypes';
 import './App.css'
 import './FirstPage.js'
 import MyCheckbox from './MyCheckbox';
@@ -15,16 +14,16 @@ export default function ThirdPage(props) {
             <div className = 'content'>
                 <header className="header"> 
                 </header>
-                <h1>Your To-Do List </h1>
+                <h1 style = {{fontWeight: 'normal'}}>Your To-Do List </h1>
                 
                 <div>
                 
-                    Your goal was to: 
+                Your goal was to: 
                 <span style ={{fontWeight:'bolder', fontSize:'large'}}> {props.goal}</span>
                 </div>
                 <div className='whitewrap' >
-                <h4 style ={{marginTop:'1rem', marginBottom: '0'}}>Action items to achieve this goal:</h4>
- 
+                <h4 style ={{fontWeight: 'normal',marginTop:'1rem', marginBottom: '1rem'}}>Action items to achieve this goal</h4>
+                <hr style ={{marginTop:'0'}}></hr>
                 <div>
                 <MyCheckbox messages= {props.messages}/>
                 </div>

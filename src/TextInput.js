@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import './SecondPage.css';
+import ReactDOM from 'react-dom';
+import Button from '@mui/material/Button';
 
 
 
@@ -21,15 +23,11 @@ function TextInput(props) {
         value = {action} 
         onChange={(e) => setAction(e.target.value)} />
     
-    <button className='add-action' 
-        onClick = {click}
-
-    > 
-      Add 
-
-       </button>
+  
+    <Button variant="outlined" onClick = {click}>Add</Button>
+    
    </div>
-
+ 
  );
 }
 

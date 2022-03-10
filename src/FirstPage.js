@@ -6,6 +6,10 @@ import Dropdown from './Dropdown.js';
 import './App.css';
 import GoalInput from './GoalInput';
 
+import ReactDOM from 'react-dom';
+import Button from '@mui/material/Button';
+
+
 
 const items = [
     {
@@ -35,7 +39,7 @@ const items = [
     
       <div className="App">
         <div className ='content'>
-        <h2 style = {{fontWeight: 'normal'}}> What are your goals? </h2>
+        <h1 style = {{fontWeight: 'normal'}}> What is your goal? </h1>
         <h4 className='h4'>
         <div> They can be as broad or as specific as you want.</div> 
         <div>They can span over a course of a month or a day. </div>
@@ -52,11 +56,11 @@ const items = [
         </form>
         
         <Dropdown selectTitle = "Select Timeline For Goal" items = {items}/> 
-        <button className = "add" onClick={send}> 
-                Add Goal  
-              </button>
-              </div>
+     
+
+        <Button variant="contained" onClick={send} style = {{marginTop: '2rem'}}>Add Goal</Button>
       
+      </div>
       </div>
     
     
