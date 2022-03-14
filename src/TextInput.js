@@ -15,6 +15,8 @@ function TextInput(props) {
         sendMessage(action)
         setAction('');
     }
+   
+    
  return (
     <div>
         <input 

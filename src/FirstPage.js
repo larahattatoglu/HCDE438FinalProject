@@ -39,7 +39,7 @@ const items = [
     
       <div className="App">
         <div className ='content'>
-        <h1 style = {{fontWeight: 'normal'}}> What is your goal? </h1>
+        <h1 style = {{fontWeight: 'normal'}}> Let's Create a SMART Goal! </h1>
         <h4 className='h4'>
         <div> They can be as broad or as specific as you want.</div> 
         <div>They can span over a course of a month or a day. </div>
@@ -55,7 +55,7 @@ const items = [
        </div>
         </form>
         
-        <Dropdown selectTitle = "Select Timeline For Goal" items = {items}/> 
+        <Dropdown selectTitle = "Select Timeline For Goal" items = {items} setSelection = {props.setSelection} selection = {props.selection}/> 
      
 
         <Button variant="contained" onClick={send} style = {{marginTop: '2rem'}}>Add Goal</Button>

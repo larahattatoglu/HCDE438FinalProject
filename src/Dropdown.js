@@ -3,15 +3,15 @@ import React from 'react';
 import { useState } from 'react';
 
 
-function Dropdown({selectTitle, items, multiSelect= false}) {
+function Dropdown({selectTitle, items, multiSelect= false, selection, setSelection}) {
     const [open,setOpen] = useState(false);
-    const [selection, setSelection] = useState([]);
     const toggle = () => setOpen(!open);
     Dropdown.handleClickOutside = () => setOpen(false);
 
     function handleOnClick(item) {
         if (!selection.some(current => current.id === item.id)) {
             if(!multiSelect) {
+                console.log(item);
                 setSelection([item]);
             } else if (multiSelect) {
                 setSelection([...selection, item]);

@@ -14,18 +14,19 @@ function App() {
   const [page, setPage] = useState(1)
   const [goal, setGoal] = useState('');
   const [messages,setMessages] = useState([]);
+  const [selection, setSelection] = useState([]);
   
 
   
   function pageGenerator () {
     if (page === 1) {
-    return <FirstPage afterFirstPage = {setPage} setGoal = {setGoal} goal = {goal} />
+    return <FirstPage afterFirstPage = {setPage} setGoal = {setGoal} goal = {goal} setSelection = {setSelection} selection= {selection}/>
     }
     else if (page === 2) {
-      return <SecondPage afterFirstPage = {setPage} setMessages = {setMessages} messages = {messages}/>
+      return <SecondPage afterFirstPage = {setPage} setMessages = {setMessages} messages = {messages} />
     }
     else if (page === 3) {
-      return <ThirdPage afterFirstPage = {setPage} goal = {goal} setMessages = {setMessages} messages = {messages}/>
+      return <ThirdPage afterFirstPage = {setPage} goal = {goal} setMessages = {setMessages} messages = {messages} selection = {selection}/>
     }
    
   }

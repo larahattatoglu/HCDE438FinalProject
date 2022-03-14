@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import TextInput from './TextInput.js';
 
-
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
@@ -30,10 +30,13 @@ export default function SecondPage(props) {
      
      function sendMessage(msg) {
        console.log(msg);
+       
        props.setMessages([msg, ...props.messages]);
 
 
      }
+  
+
     
      /* style={{color:'red', fontWeight:'bold',marginTop:'1.5rem'}} */
     return (
@@ -41,9 +44,9 @@ export default function SecondPage(props) {
         <div className="App">
         <div className = 'content'>  
         
-          <button className = "back-button" onClick={back}> 
+          
                  
-          </button>
+        <Button onClick = {back}>Back</Button>
          
             <h1 style = {{fontWeight: 'normal'}}>How are you going to Eat Healthier? </h1> 
             
@@ -62,7 +65,7 @@ export default function SecondPage(props) {
             <span>Good Example: Add atleast two vegetables to breakfast this week</span>
             <p style = {{fontWeight:'normal'}}> • Measurable</p>
             <p style = {{fontWeight:'normal'}}> • Specific</p>
-            <p style = {{fontWeight:'normal'}}> • realistic </p>
+            <p style = {{fontWeight:'normal'}}> • Realistic </p>
             </div>
             <div class ='form'>
 
@@ -72,13 +75,13 @@ export default function SecondPage(props) {
             </form>
             <div className='messages'>
               {props.messages.map((msg)=>{
-                return <div className= 'message'> {msg} <IconButton aria-label="delete">
+                return <div className= 'message'>  {msg}  <IconButton aria-label="delete">
                 <DeleteIcon />
               </IconButton> </div>
               })}
             </div>
             </div>
-            <TextInput sendMessage= {sendMessage}/> 
+            <TextInput setCount = {props.setCount} count = {props.count} sendMessage= {sendMessage}/> 
             <Button variant="contained" onClick={send} style = {{marginTop: '2rem'}}>Next</Button>
               </div>
     </div>

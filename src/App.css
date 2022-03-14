@@ -44,10 +44,16 @@ body {
     }
 }
 .content {
-  background: rgb(255, 255, 255, 0.5);
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
   padding: 100px 60px 100px  60px; 
 
-  border-radius: 10px;
+  
    
 }
 
@@ -75,7 +81,7 @@ body {
   flex: 1;
   width: auto;
   height: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.6);
   padding-left: 1rem;
   padding-top: 1em;
   padding-right: 1rem;
@@ -85,6 +91,11 @@ body {
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 1rem;
+
+}
+.whitewrap:hover {
+ 
+  transform: scale(1.1);
 
 }
 hr {

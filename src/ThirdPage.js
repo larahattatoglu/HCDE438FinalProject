@@ -3,17 +3,22 @@ import React from 'react';
 import './App.css'
 import './FirstPage.js'
 import MyCheckbox from './MyCheckbox';
+import Button from '@mui/material/Button';
 
 
 
 export default function ThirdPage(props) {
+    function back() {
+        props.afterFirstPage(2)
+ 
+      }
+      
 
     return (
     
             <div className="App">
             <div className = 'content'>
-                <header className="header"> 
-                </header>
+            <Button onClick = {back}>Back</Button>
                 <h1 style = {{fontWeight: 'normal'}}>Your To-Do List </h1>
                 
                 <div>
@@ -31,6 +36,7 @@ export default function ThirdPage(props) {
                 </div>
                 <div style = {{marginTop:'2rem'}}>
                     Time to complete this goal:
+                    <span style ={{fontWeight:'bolder', fontSize:'large'}}> {props.selection[0].value} </span>
                 </div>
                 </div>
                
